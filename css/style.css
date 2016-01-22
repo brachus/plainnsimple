@@ -24,7 +24,16 @@ body
 	padding-left:5%;
 	padding-right:5%;
 	
-	background:#e0e0e0;
+	/*background:#e0e0e0;*/
+	
+	background-image: url("../images/4664797235_86edba55a0_b.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	
+	/* create inset box shadow which only show up at bottom edge 
+	-webkit-box-shadow: inset 0px -2px 3px -2px rgba(0,0,0,0.3);
+	-moz-box-shadow: inset 0px -2px 3px -2px rgba(0,0,0,0.3);
+	box-shadow: inset 0px -2px 4px 0px rgba(0,0,0,0.2); */
 }
 
 .header_title
@@ -36,7 +45,7 @@ body
 	font-size:48px;
 	font-weight:bold;
 	
-	color:black;
+	color:white;
 }
 
 .nav
@@ -117,7 +126,7 @@ input[type='search'], input[type='search']:focus
 	outline:none;
 	
 	font-family: roboto, sans-serif;
-	font-size:14px;
+	font-size:18px;
 	
 	pointer-events:none;
 	opacity: 0;
@@ -435,5 +444,12 @@ a.button_black_small_over_black:hover
 	
 	border-radius:4px;
 	
+	transition: background-color .2s:
 	
+}
+
+
+.footer_bottom_scrollup_button:hover
+{
+	background-color:#d0d0d0;
 }
