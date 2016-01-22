@@ -17,10 +17,26 @@ body
 	background-color: white;
 }
 
-.nav_padding
+.header
 {
-	height:80px;
+	height:250px;
+	width: 90%;
+	padding-left:5%;
+	padding-right:5%;
 	
+	background:#e0e0e0;
+}
+
+.header_title
+{
+	float:left;
+	
+	margin-top:100px;
+	
+	font-size:48px;
+	font-weight:bold;
+	
+	color:black;
 }
 
 .nav
@@ -30,7 +46,6 @@ body
 
 	height: 50px;
 	width: 90%;
-	
 	padding-left:5%;
 	padding-right:5%;
 	
@@ -56,6 +71,8 @@ img
 	-webkit-user-select: none; /* Chrome/Safari */        
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* IE10+ */
+	
+	border-radius:4px;
 }
 
 a.navitem, a.navitem_active, a.navitem_search
@@ -303,7 +320,6 @@ a.button_black_over_white:hover
 {
 	color:black;
 	background-color:white;
-	border-color: black;
 }
 
 a.button_black_small_over_black
@@ -399,7 +415,7 @@ a.button_black_small_over_black:hover
 
 	position:fixed;
 	
-	bottom:40px;
+	bottom:60px;
 	right:20px;
 	
 	height:25px;
