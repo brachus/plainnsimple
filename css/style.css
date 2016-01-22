@@ -1,8 +1,3 @@
-@font-face
-{
-	font-family: trocchi;
-	src: url(Trocchi.otf);
-}	
 
 body
 {
@@ -24,7 +19,6 @@ body
 	padding-left:5%;
 	padding-right:5%;
 	
-	/*background:#e0e0e0;*/
 	
 	background-image: url("../images/4664797235_86edba55a0_b.jpg");
 	background-repeat: no-repeat;

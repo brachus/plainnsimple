@@ -1,3 +1,12 @@
+.nav
+{
+	/* Make shadow under top bar larger. */
+	
+	-webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3);
+}
+
 a.button_black_over_white
 {
 	height:auto;
@@ -30,7 +39,7 @@ a.button_black_over_white
 	
 	-webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
 	-moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
-	box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.4);
+	box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.4);
 	
 	transition: background-color .2s, color .2s, border-color .2s box-shadow .2s;
 }
@@ -40,8 +49,60 @@ a.button_black_over_white:hover
 	color:black;
 	background-color:white;
 	
-	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.6);
 }
+
+.footer
+{
+	background-color: #303030;
+	color:white;
+}
+
+a.button_black_small_over_black
+{
+	height:auto;
+	width:20%;
+	
+	font-size:12px;
+	
+	float:left;
+	
+	padding:0px 4px;
+	
+	display:block;
+	
+	color:black;
+	background-color:white;
+	
+	font-weight:bold;
+	
+	
+	border:none;
+	border-radius:4px;
+	
+	
+	text-decoration:none;
+	
+	text-align:center;
+	
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	
+	-webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.4);
+	
+	transition: background-color .2s, box-shadow .2s;
+}
+
+a.button_black_small_over_black:hover
+{
+	background-color:#d0d0d0;
+	
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.6);
+}
+
 
 .footer_bottom_scrollup_button
 {
@@ -65,7 +126,7 @@ a.button_black_over_white:hover
 	
 	-webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
 	-moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
-	box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.4);
+	box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.4);
 	
 	border-radius:4px;
 	
@@ -75,5 +136,10 @@ a.button_black_over_white:hover
 .footer_bottom_scrollup_button:hover
 {
 	background-color:#d0d0d0;
-	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.6);
+}
+
+img.photo
+{
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.6);
 }
