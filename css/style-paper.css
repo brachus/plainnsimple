@@ -1,0 +1,79 @@
+a.button_black_over_white
+{
+	height:auto;
+	width:100px;
+	
+	font-size:14px;
+	
+	float:left;
+	
+	padding:6px 10px;
+	
+	display:block;
+	
+	color:black;
+	background-color:#e0e0e0;
+	
+	font-weight:bold;
+	
+	border:none;
+	border-radius:4px;
+	
+	
+	text-decoration:none;
+	
+	text-align:center;
+	
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	
+	-webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.4);
+	
+	transition: background-color .2s, color .2s, border-color .2s box-shadow .2s;
+}
+
+a.button_black_over_white:hover
+{
+	color:black;
+	background-color:white;
+	
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.3);
+}
+
+.footer_bottom_scrollup_button
+{
+	background-color:white;
+
+	position:fixed;
+	
+	bottom:60px;
+	right:20px;
+	
+	height:25px;
+	width:auto;
+	
+	padding:5px 20px;
+	
+	cursor: pointer;
+	
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	
+	-webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.4);
+	
+	border-radius:4px;
+	
+	transition: background-color .2s, box-shadow .2s;
+}
+
+.footer_bottom_scrollup_button:hover
+{
+	background-color:#d0d0d0;
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.3);
+}
