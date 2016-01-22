@@ -32,7 +32,7 @@ var search_open = function()
 	
 	/* make visible, adjust size, and fade in text field*/
 	$('input').css({'pointer-events':'auto', 'display':'block'});
-	$('input').animate({'width':'130px', 'opacity':'1'}, fad_dur/2);
+	$('input').animate({'width':'200px', 'opacity':'1'}, fad_dur/2);
 	$('input').focus();
 	
 	
