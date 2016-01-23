@@ -15,9 +15,35 @@ var boxshad_val = 'none';
 
 var search_state = 'closed';
 
+var scrolltotop_state = 'none';
+
+var scrolltotop_right = '10px';
+
+var totop_dur = 300;
+
+
+
+
+var do_parallax = function()
+{
+	var img_ymid = 500;
+	$('.header').each(function (i)
+		{
+			var obj_btm = $(this).offset().top;
+			var scr_rel = $(window).scrollTop() - obj_btm;
+			$(this).css(
+				{
+					'background-position': '0px '+(scr_rel * 0.6)+'px'
+				}
+			);	
+		}
+	);
+}
 
 var search_open = function()
 {
+	search_state = 'open';
+	
 	/* fade out/disable every other navitem in top bar */
 	$('a.navitem, a.navitem_active').each(
 		function(i)
@@ -28,23 +54,47 @@ var search_open = function()
 	);
 	
 	/* adjust search icon padding */
-	$('a.navitem_search').animate( { 'padding-left':'16px'}, fad_dur/2);
+	$('a.navitem_search').animate( { 'padding-left':'16px',
+		'padding-right':'8px'}, fad_dur/2);
 	
 	/* make visible, adjust size, and fade in text field*/
 	$('input').css({'pointer-events':'auto', 'display':'block'});
-	$('input').animate({'width':'200px', 'opacity':'1'}, fad_dur/2);
+	$('input').animate({'width':'200px','padding':'0px 10px', 'opacity':'1'}, fad_dur/2);
 	$('input').focus();
 	
+	/* make visible, adjust size, and fade in search box close button */
+	$('a.navitem_search_close').css({'pointer-events':'auto', 'display':'block'});
+	$('a.navitem_search_close').animate(
+		{
+			'width':'20px',
+			'padding-top':'14px',
+			'padding-right':'40px',
+			'padding-left':'10px',
+			'opacity':'1'
+		},
+		fad_dur/2
+	);
 	
-		
 }
 
 var search_close = function()
 {
-	$('input').css({'pointer-events':'none'});
-	$('input').animate({'width':'0px', 'opacity':'0'}, fad_dur/2);
+	search_state = 'closed';
 	
-	$('a.navitem_search').animate( { 'padding-left':'40px'}, fad_dur/2);
+	$('a.navitem_search_close').css({'pointer-events':'none'});
+	$('a.navitem_search_close').animate(
+		{
+			'width':'0', 
+			'opacity':'0',
+			'padding':'14px 0px'
+		},
+		fad_dur/2
+	);
+	
+	$('input').css({'pointer-events':'none'});
+	$('input').animate({'width':'0px', 'opacity':'0', 'padding':'0'}, fad_dur/2);
+	
+	$('a.navitem_search').animate( { 'padding-left':'40px','padding-right':'40px'}, fad_dur/2);
 	
 	$('a.navitem, a.navitem_active').each(
 		function(i)
@@ -55,18 +105,21 @@ var search_close = function()
 	);
 }
 
+var do_search = function()
+{
+	console.log('do_search()');
+	/* do search */
+}
+
 var search_toggle = function()
 {
 	if (search_state == 'closed')
 	{
 		search_open();
-		search_state = 'open';
+		
 	}
 	else
-	{
-		search_close();
-		search_state = 'closed';
-	}
+		do_search();
 }
 
 /* using jquery, check through each object under multiple elements,
@@ -84,6 +137,7 @@ var effect_check_through_fadein = function(instant)
 						{	'opacity' : '1',
 							'margin-top' : '10px'
 						} );
+				
 			else if (win_btm > obj_btm_offset)
 				$(this).animate(
 					{
@@ -119,19 +173,54 @@ var effect_no_shadow_at_top = function()
 			
 }
 
+var no_scrolltotop_at_top = function()
+{
+	if ( $(window).scrollTop() < 50)
+	{
+		if (scrolltotop_state == 'visible')
+		{
+			$('a.footer_bottom_scrollup_button').animate(
+				{ 'right': '-100px' }, 
+				fad_dur/2
+			);
+			
+			scrolltotop_state = 'none';
+		}
+	}
+	else
+	{
+		if (scrolltotop_state == 'none')
+		{
+			$('a.footer_bottom_scrollup_button').animate(
+				{ 'right': '10px' }, 
+				fad_dur/2
+			);
+			
+			scrolltotop_state = 'visible';
+		}
+	}
+}
+
 var scroll_to_top = function()
 {
-	$('html, body').animate({ scrollTop: 0 }, fad_dur*2 );
+	$('html, body').animate({ scrollTop: 0 }, totop_dur );
 }
 
 
-$(window).load(
+/* .ready is better*/
+$(window).ready(
 	function()
 	{
 		effect_check_through_fadein(true);
 		effect_no_shadow_at_top();
 		
+		no_scrolltotop_at_top();
+		
+		do_parallax();
+		
 		$('a.navitem_search').click(search_toggle);
+		
+		$('a.navitem_search_close').click(search_close);
 		
 		$('a.footer_bottom_scrollup_button').click(scroll_to_top);
 		
@@ -144,5 +233,9 @@ $(window).scroll(
 	{
 		effect_check_through_fadein(false);
 		effect_no_shadow_at_top();
+		
+		no_scrolltotop_at_top();
+		
+		do_parallax();
 	}
 );

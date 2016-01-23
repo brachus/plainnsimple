@@ -4,8 +4,26 @@
 	
 	-webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
 	-moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
-	box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.3);
 }
+
+a.navitem
+{
+	transition: background-color .3s;
+}
+
+a.navitem_active
+{
+	color: black;
+	background-color:#e0e0e0;
+}
+
+a.navitem:hover
+{
+	background-color:#e0e0e0;
+}
+
+
 
 a.button_black_over_white
 {
@@ -39,7 +57,7 @@ a.button_black_over_white
 	
 	-webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
 	-moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
-	box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.4);
+	box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.4);
 	
 	transition: background-color .2s, color .2s, border-color .2s box-shadow .2s;
 }
@@ -49,7 +67,7 @@ a.button_black_over_white:hover
 	color:black;
 	background-color:white;
 	
-	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.6);
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.9);
 }
 
 .footer
@@ -100,23 +118,19 @@ a.button_black_small_over_black:hover
 {
 	background-color:#d0d0d0;
 	
-	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.6);
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.8);
 }
 
 
 .footer_bottom_scrollup_button
 {
+	border:none;
+	
 	background-color:white;
 
-	position:fixed;
-	
-	bottom:60px;
-	right:20px;
-	
 	height:25px;
 	width:auto;
 	
-	padding:5px 20px;
 	
 	cursor: pointer;
 	
@@ -126,20 +140,22 @@ a.button_black_small_over_black:hover
 	
 	-webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
 	-moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
-	box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.4);
+	box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.5);
+	
 	
 	border-radius:4px;
 	
-	transition: background-color .2s, box-shadow .2s;
+	transition: background-color .3s, box-shadow .3s;
 }
 
 .footer_bottom_scrollup_button:hover
 {
 	background-color:#d0d0d0;
-	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.6);
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.8);
+	
 }
 
 img.photo
 {
-	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.6);
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.8);
 }

@@ -19,9 +19,12 @@ body
 	padding-left:5%;
 	padding-right:5%;
 	
+	float:left;
+	
 	
 	background-image: url("../images/4664797235_86edba55a0_b.jpg");
 	background-repeat: no-repeat;
+	background-position:fixed;
 	background-size: 100% auto;
 	
 	/* create inset box shadow which only show up at bottom edge 
@@ -66,7 +69,7 @@ body
 	
 	-webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
 	-moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
-	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.2);
 }
 
 img
@@ -78,7 +81,7 @@ img
 	border-radius:4px;
 }
 
-a.navitem, a.navitem_active, a.navitem_search
+a.navitem, a.navitem_active, a.navitem_search, a.navitem_search_close
 {
 	display:block;
 	padding-right: 40px;
@@ -100,17 +103,32 @@ a.navitem, a.navitem_active, a.navitem_search
 	cursor:pointer;
 }
 
-a.navitem_search
+a.navitem_search, a.navitem_search_close
 {
 	padding-top:14px;
+	width:20px;
+}
+
+a.navitem_search_close
+{
+	width: 0;
+	padding:14px 0px;
+	
+	
+	pointer-events:none;
+	opacity: 0;
+	
+	overflow:hidden;
 }
 
 input[type='search'], input[type='search']:focus
 {
+	overflow:hidden;
+	
 	margin-top:10px;
 	float:right;
 	
-	padding:0px 10px;
+	padding:0px 0px;
 	
 	background-color:white;
 	color:#303030;
@@ -130,22 +148,15 @@ input[type='search'], input[type='search']:focus
 }
 
 
-
-
-a.navitem
-{
-	transition: background-color .3s;
-}
-
 a.navitem_active
 {
-	color: black;
-	background-color:#e0e0e0;
+	color: white;
+	background-color:black;
 }
 
 a.navitem:hover
 {
-	background-color:#e0e0e0;
+	background-color:#f0f0f0;
 }
 
 
@@ -377,8 +388,8 @@ a.button_black_small_over_black:hover
 	
 	margin-top:40px;
 	
-	padding-top:10px;
-	padding-bottom:20px;
+	padding-top:30px;
+	padding-bottom:50px;
 	
 	background-color: black;
 	color: white;
@@ -414,12 +425,18 @@ a.button_black_small_over_black:hover
 
 .footer_bottom_scrollup_button
 {
+	
+	border-style:solid;
+	border-width: 2px;
+	border-color: black;
+	border-radius:4px;
+	
 	background-color:white;
 
 	position:fixed;
 	
 	bottom:60px;
-	right:20px;
+	right:-100px;
 	
 	height:25px;
 	width:auto;
@@ -434,9 +451,9 @@ a.button_black_small_over_black:hover
 	
 	-webkit-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
 	-moz-box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.1);
-	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.3);
 	
-	border-radius:4px;
+	
 	
 	transition: background-color .2s:
 	

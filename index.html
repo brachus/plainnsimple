@@ -6,7 +6,7 @@
 	</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href="css/style-paper.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+	<!--link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto"-->
 	<script src='js/jquery-2.2.0.js'></script>
 	<script src='js/main.js'></script>
 	<noscript>
@@ -20,10 +20,13 @@
 				<img src="images/logo.png" alt="Site logo">
 			</a>
 			<form method='get' action='index.html'>
+				<a class='navitem_search_close'>
+					<img src='images/16px-search-close.png' alt='search'>
+				</a>
+				<input type='search' class='.navitem_search_input' placeholder='Search' name='search'>
 				<a class='navitem_search'>
 					<img src='images/16px-search.png' alt='search'>
 				</a>
-				<input type='search' class='.navitem_search_input' placeholder='Search' name='search'>
 			</form>
 			<a class='navitem' href='index.html'>Store</a>
 			<a class='navitem' href='index.html'>Contact</a>
@@ -173,6 +176,9 @@
 					More
 				</a>
 			</div>
+		</div>
+		<div class='widget header'>
+			<div class='header_title'>Sample Page</div>
 		</div>
 		<div class='widget content'>
 			<h1>Our Services</h1>
