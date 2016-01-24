@@ -27,7 +27,7 @@ var totop_dur = 300;
 var do_parallax = function()
 {
 	var img_ymid = 500;
-	$('.header').each(function (i)
+	$('.parallax_banner').each(function (i)
 		{
 			var obj_btm = $(this).offset().top;
 			var scr_rel = $(window).scrollTop() - obj_btm;
